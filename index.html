@@ -120,7 +120,15 @@ a{color:inherit}
 
 /* ---------- nav: big, physical, built from the same bold lines ---------- */
 .nav{position:sticky;top:0;z-index:60;background:var(--cream);border-bottom:var(--bw) solid var(--ink)}
-.nav-in{display:flex;align-items:center;gap:clamp(12px,1.8vw,22px);padding:clamp(16px,2vw,22px) 0}
+/* The bar spans the whole screen — Beau's call, 3 Aug 2026. It still carries
+   .wrap for the gutter, but drops .wrap's 1300px cap: on a wide screen that
+   cap was centring the bar and pushing the mark 134px in before the gutter
+   was even added, which is what made it look stranded. The mark now sits one
+   gutter from the edge at every width.
+   The cost, chosen knowingly: the mark no longer lines up with the hero
+   headline and the section headings, which are still on the 1300px grid.
+   The FOOTER mark is untouched and still aligns with the page. */
+.nav-in{display:flex;align-items:center;gap:clamp(12px,1.8vw,22px);padding:clamp(16px,2vw,22px) var(--gut);max-width:none}
 
 .mark{
   font-family:"BarlowCond",sans-serif;font-weight:600;
@@ -132,6 +140,11 @@ a{color:inherit}
   border:var(--bw) solid var(--ink);border-radius:0;
   padding:2px 13px;margin-left:7px;box-shadow:0 4px 0 var(--ink)
 }
+/* "RE-RENTAL" at full wordmark size — Beau's call, 3 Aug 2026: the yard is
+   wholesale re-rental and the mark should say so at full volume. It costs
+   about 250px, which is why the nav collapses at 1400px rather than 1180px
+   and why the mark steps down twice on small screens. Both are below. */
+.mark .rr{margin-left:.24em}
 
 /* the tabs */
 .tabs{display:flex;gap:clamp(7px,.8vw,11px);margin-inline:auto}
@@ -240,6 +253,16 @@ a{color:inherit}
 .units{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .u{background:var(--card);border:var(--bw) solid var(--ink);border-radius:0;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 0 var(--ink);transition:transform .18s,box-shadow .18s}
 .u:hover{transform:translateY(-3px);box-shadow:0 8px 0 var(--ink)}
+/* Each card is a link to unit.html — the whole card, not a button inside it.
+   The lift on hover was already here and now means something. */
+.u{text-decoration:none;color:inherit}
+.u:hover h3{color:var(--brick)}
+.u .go{
+  margin-left:auto;font-family:"BarlowCond",sans-serif;font-weight:600;
+  font-size:16px;letter-spacing:.05em;text-transform:uppercase;color:var(--brick);
+  white-space:nowrap;transition:transform .18s
+}
+.u:hover .go{transform:translateX(3px)}
 .u img{width:100%;height:184px;object-fit:cover;border-bottom:var(--bw) solid var(--ink)}
 .u .b{padding:22px;display:flex;flex-direction:column;flex:1}
 .u h3{font-size:22px;margin-bottom:6px}
@@ -437,6 +460,16 @@ h1,h2,h3{line-height:1.0}
   .acts .btn{width:100%}
   .nav .tel span{display:none}
 }
+
+/* The mark is three words now, and on a phone it has to share the bar with
+   the menu button. At the old 28px floor "DOUBLE L RE-RENTAL" is about
+   311px wide and a 320px handset only leaves it ~242px, so the floor steps
+   down here rather than letting the bar overflow. The brick plate shrinks
+   with it so the lockup stays in proportion. */
+@media (max-width:520px){
+  .mark{font-size:clamp(19px,5.6vw,26px)}
+  .mark i{padding:2px 9px;margin-left:5px;box-shadow:0 3px 0 var(--ink)}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition-duration:.001ms!important}
@@ -448,7 +481,7 @@ h1,h2,h3{line-height:1.0}
 <a class="btn skip" href="#fleet">Skip to the equipment</a>
 
 <header class="nav" id="nav"><div class="wrap nav-in">
-  <a class="mark" href="#top">Double<i>L</i></a>
+  <a class="mark" href="#top">Double<i>L</i><span class="rr">Re-Rental</span></a>
 
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="tabs">
     <span></span><span></span><span></span>
@@ -501,7 +534,7 @@ h1,h2,h3{line-height:1.0}
 
   <div class="units">
 
-    <div class="u feature">
+    <a class="u feature" href="unit.html?u=water-6x6">
       <img src="assets/day/water-6x6.jpg" alt="6x6 water truck">
       <div class="wrapcol">
         <div class="b">
@@ -509,31 +542,31 @@ h1,h2,h3{line-height:1.0}
           <h3>6&times;6 Water Truck</h3>
           <p class="spec">4,000 gallon &middot; six-wheel drive &middot; 10-speed manual. The one
           rental yards call us for &mdash; dust control on haul roads, pads and lay-downs.</p>
-          <div class="p"><b class="num">$1,600</b><span>per day</span></div>
+          <div class="p"><b class="num">$1,600</b><span>per day</span><span class="go">Details &rarr;</span></div>
         </div>
         <div class="tag">Rental companies pay less</div>
       </div>
-    </div>
+    </a>
 
-    <div class="u"><img src="assets/day/water-auto.jpg" alt="Automatic water truck">
+    <a class="u" href="unit.html?u=water-auto"><img src="assets/day/water-auto.jpg" alt="Automatic water truck">
       <div class="b"><span class="kind">Water truck</span><h3>Water Truck &mdash; Automatic</h3><p class="spec">4,000 gallon &middot; automatic transmission</p>
-      <div class="p"><b class="num">$850</b><span>per day</span></div></div>
-      <div class="tag">Rental companies pay less</div></div>
+      <div class="p"><b class="num">$850</b><span>per day</span><span class="go">Details &rarr;</span></div></div>
+      <div class="tag">Rental companies pay less</div></a>
 
-    <div class="u"><img src="assets/day/svl97.jpg" alt="Kubota SVL97-3 skid steer">
+    <a class="u" href="unit.html?u=svl97"><img src="assets/day/svl97.jpg" alt="Kubota SVL97-3 skid steer">
       <div class="b"><span class="kind">Skid steer</span><h3>Kubota SVL97-3</h3><p class="spec">11,989 lb &middot; hydraulic quick coupler</p>
-      <div class="p"><b class="num">$613</b><span>per day</span></div></div>
-      <div class="tag">Rental companies pay less</div></div>
+      <div class="p"><b class="num">$613</b><span>per day</span><span class="go">Details &rarr;</span></div></div>
+      <div class="tag">Rental companies pay less</div></a>
 
-    <div class="u"><img src="assets/day/svl75.jpg" alt="Kubota SVL75-3 skid steer">
+    <a class="u" href="unit.html?u=svl75"><img src="assets/day/svl75.jpg" alt="Kubota SVL75-3 skid steer">
       <div class="b"><span class="kind">Skid steer</span><h3>Kubota SVL75-3</h3><p class="spec">9,315 lb &middot; 75 horsepower</p>
-      <div class="p"><b class="num">$575</b><span>per day</span></div></div>
-      <div class="tag">Rental companies pay less</div></div>
+      <div class="p"><b class="num">$575</b><span>per day</span><span class="go">Details &rarr;</span></div></div>
+      <div class="tag">Rental companies pay less</div></a>
 
-    <div class="u"><img src="assets/day/lighttower.jpg" alt="Towable light tower">
+    <a class="u" href="unit.html?u=lighttower"><img src="assets/day/lighttower.jpg" alt="Towable light tower">
       <div class="b"><span class="kind">Lighting</span><h3>Light Tower</h3><p class="spec">Adjustable LED &middot; diesel &middot; towable</p>
-      <div class="p"><b class="num">$152</b><span>per day</span></div></div>
-      <div class="tag">Rental companies pay less</div></div>
+      <div class="p"><b class="num">$152</b><span>per day</span><span class="go">Details &rarr;</span></div></div>
+      <div class="tag">Rental companies pay less</div></a>
 
   </div>
 
@@ -636,7 +669,7 @@ h1,h2,h3{line-height:1.0}
 </main>
 
 <footer class="foot"><div class="wrap foot-in">
-  <a class="mark" href="#top">Double<i>L</i></a>
+  <a class="mark" href="#top">Double<i>L</i><span class="rr">Re-Rental</span></a>
   <span>Equipment Rental Co &middot; Bay City, TX 77414</span>
   <span style="margin-left:auto"><a href="mailto:info@doublelequipmentrentco.com">info@doublelequipmentrentco.com</a></span>
 </div></footer>
