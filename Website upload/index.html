@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Double L Equipment Rental Co — Wholesale Re-Rental, Bay City, Texas</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta name="description" content="Double L rents water trucks, skid steers and light towers to other rental companies at wholesale. You rent it out under your own name. Bay City, Texas. (682) 262-1318.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Double L Equipment Rental Co — wholesale iron for rental yards">
+<meta property="og:description" content="Water trucks, skid steers and light towers, rented to you at trade — so you can rent them out under your own name. Bay City, Texas.">
+<meta property="og:image" content="/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAF5EC">
+
+<!--
+  ============================================================
+  DOUBLE L — WORKING DRAFT
+  ============================================================
+
+  This is ONE file. No build step, no server, no internet needed —
+  double-click it and it runs. Everything it uses (fonts, photos,
+  video) is in the assets/ folder next to it.
+
+  WHERE TO EDIT THINGS
+  --------------------
+  Colours ................ :root, right below this comment
+  Line weight (--bw) ..... :root — the 3px that draws every box
+  Phone number ........... search for 262-1318 (appears 4 times)
+  Email .................. search for info@doublel
+  Headline + subhead ..... section class="hero"
+  The three steps ........ section class="steps"
+  Machines + prices ...... section class="fleet" — one <div class="u"> per machine
+  Family paragraph ....... section class="human"
+  Photos ................. assets/day/ — swap the file, keep the name
+  Hero video clips ....... the CLIPS list at the bottom of this file
+
+  STILL PLACEHOLDER
+  -----------------
+  · The five equipment photographs are REAL — the actual units, shot at the yard,
+    installed 2 Aug 2026. The hero reel and the crew shot are still generated and
+    are the last synthetic imagery on the page.
+  · "DOUBLE L" is set in Barlow Condensed — there is no drawn logo yet.
+  · The tab icon is a plain brick square with an L, for the same reason.
+  · Nothing on the page captures a lead — every action is a phone call or an email.
+  ============================================================
+-->
+
+<style>
+/* Barlow Condensed carries every heading and control; Archivo carries the
+   reading text. Anton and Barlow were the previous pairing — see
+   variants/baseline-comfortable-2aug2026.html. */
+@font-face{font-family:"BarlowCond";src:url("assets/fonts/barlow-condensed-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"BarlowCond";src:url("assets/fonts/barlow-condensed-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"BarlowCond";src:url("assets/fonts/barlow-condensed-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-700.woff2") format("woff2");font-weight:700;font-display:swap}
+
+/* ============================================================
+   DOUBLE L — BRICK
+   Cream ground, brick red, one bold line weight in dark brown.
+   Warm enough to be welcoming, bold enough to feel like equipment.
+   ============================================================ */
+
+:root{
+  --cream:#FAF5EC;      /* page */
+  --sand:#F0E6D6;       /* panels */
+  --card:#FFFCF6;       /* cards sit slightly brighter than the page */
+  --ink:#2B2320;        /* text + every bold line */
+  --ink-soft:#6A5B52;
+  --brick:#A83B32;
+  --brick-deep:#7C2820;
+  --brick-ink:#FFF8F0;
+  --brick-wash:#F6E7DF;
+  --bw:2px;             /* the one line weight */
+  --gut:clamp(20px,5vw,60px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+/* anchors land below the sticky bar instead of behind it */
+html{scroll-behavior:smooth;scroll-padding-top:clamp(88px,12vh,116px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:18px;line-height:1.58;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{margin:0;font-family:"BarlowCond",sans-serif;font-weight:600;line-height:1.03;letter-spacing:.014em}
+a{color:inherit}
+.wrap{width:100%;max-width:1300px;margin:0 auto;padding-inline:var(--gut)}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:0}
+
+/* keyboard users get a way past the nav; invisible until tabbed to */
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{position:fixed;left:16px;top:16px;z-index:200;width:auto;height:auto}
+
+/* signature: a heavy brick bar above each section heading */
+/* the signature above each heading: a hazard stripe, not a plain block */
+.bar{display:inline-block;height:14px;width:96px;margin-bottom:16px;border:var(--bw) solid var(--ink);
+  background:repeating-linear-gradient(135deg,var(--brick) 0 9px,var(--ink) 9px 18px)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:"BarlowCond",sans-serif;font-weight:600;font-size:18px;letter-spacing:-.01em;
+  padding:17px 30px;border:var(--bw) solid var(--ink);border-radius:0;
+  background:var(--brick);color:var(--brick-ink);text-decoration:none;cursor:pointer;
+  box-shadow:0 4px 0 var(--ink);transition:transform .16s,box-shadow .16s,background .2s
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink);background:var(--brick-deep)}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.btn.cream{background:var(--card);color:var(--ink)}
+.btn.cream:hover{background:#fff}
+.btn.dark{background:var(--ink);color:var(--cream);box-shadow:0 4px 0 var(--brick-deep)}
+.btn.dark:hover{background:#1B1512}
+.acts{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- nav: big, physical, built from the same bold lines ---------- */
+.nav{position:sticky;top:0;z-index:60;background:var(--cream);border-bottom:var(--bw) solid var(--ink)}
+.nav-in{display:flex;align-items:center;gap:clamp(12px,1.8vw,22px);padding:clamp(16px,2vw,22px) 0}
+
+.mark{
+  font-family:"BarlowCond",sans-serif;font-weight:600;
+  font-size:clamp(28px,3.4vw,42px);letter-spacing:-.035em;
+  text-decoration:none;display:inline-flex;align-items:center;line-height:1;flex:none
+}
+.mark i{
+  font-style:normal;background:var(--brick);color:var(--brick-ink);
+  border:var(--bw) solid var(--ink);border-radius:0;
+  padding:2px 13px;margin-left:7px;box-shadow:0 4px 0 var(--ink)
+}
+
+/* the tabs */
+.tabs{display:flex;gap:clamp(7px,.8vw,11px);margin-inline:auto}
+.tab{
+  position:relative;z-index:0;overflow:hidden;
+  display:inline-flex;align-items:center;
+  font-family:"BarlowCond",sans-serif;font-weight:600;
+  font-size:clamp(15px,1.25vw,18px);letter-spacing:-.015em;
+  padding:clamp(13px,1.5vw,17px) clamp(15px,1.5vw,24px);
+  border:var(--bw) solid var(--ink);border-radius:0;
+  background:var(--card);color:var(--ink);text-decoration:none;white-space:nowrap;
+  box-shadow:0 4px 0 var(--ink);
+  transition:transform .16s,box-shadow .16s,color .22s
+}
+/* brick fills up from the bottom on hover */
+.tab::before{
+  content:"";position:absolute;inset:0;z-index:-1;background:var(--brick);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform .3s cubic-bezier(.2,.85,.25,1)
+}
+.tab:hover::before,.tab:focus-visible::before{transform:scaleY(1)}
+.tab:hover,.tab:focus-visible{color:var(--brick-ink);transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.tab:active{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.tab[aria-current="page"]{color:var(--brick-ink)}
+.tab[aria-current="page"]::before{transform:scaleY(1)}
+
+/* The "Become a member" tab and its pre-filled brick treatment lived here.
+   Removed 3 Aug 2026 — membership is a later feature and the button implied
+   it existed today. The .tab.join styles came out with it. */
+
+.nav .tel{
+  display:inline-flex;align-items:center;gap:11px;flex:none;
+  background:var(--ink);color:var(--cream);text-decoration:none;
+  font-family:"BarlowCond",sans-serif;font-weight:600;font-size:clamp(16px,1.4vw,20px);
+  padding:clamp(13px,1.5vw,17px) clamp(18px,2vw,26px);
+  border-radius:0;border:var(--bw) solid var(--ink);
+  box-shadow:0 4px 0 var(--brick);
+  transition:transform .16s,box-shadow .16s,background .2s
+}
+.nav .tel:hover{background:#1B1512;transform:translateY(-2px);box-shadow:0 6px 0 var(--brick)}
+.nav .tel:active{transform:translateY(2px);box-shadow:0 2px 0 var(--brick)}
+.nav .tel svg{width:21px;height:21px;fill:none;stroke:#E9A79E;stroke-width:2.2;flex:none}
+
+/* mobile menu button */
+.burger{
+  display:none;margin-left:auto;flex:none;
+  width:56px;height:56px;padding:15px;
+  background:var(--card);border:var(--bw) solid var(--ink);border-radius:0;
+  box-shadow:0 4px 0 var(--ink);cursor:pointer;
+  flex-direction:column;justify-content:space-between
+}
+.burger span{display:block;height:3px;background:var(--ink);transition:transform .3s,opacity .2s}
+.nav[data-open="true"] .burger span:nth-child(1){transform:translateY(9.5px) rotate(45deg)}
+.nav[data-open="true"] .burger span:nth-child(2){opacity:0}
+.nav[data-open="true"] .burger span:nth-child(3){transform:translateY(-9.5px) rotate(-45deg)}
+
+/* ---------- hero: a 5-clip reel, each 3s, crossfaded and repeating ---------- */
+.hero{
+  position:relative;background:var(--sand);
+  border-bottom:var(--bw) solid var(--ink);
+  height:clamp(400px,54vh,540px);overflow:hidden
+}
+/* every layer sits in the same box; only opacity separates them */
+.hero .layer{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:66% 62%
+}
+.hero video.layer{opacity:0;transition:opacity var(--fade,.6s) linear;z-index:2}
+.hero img.layer{z-index:1}
+/* warm scrim so cream type sits on cream, not on sky */
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:3;
+  background:linear-gradient(96deg,var(--cream) 0%,rgba(250,245,236,.92) 26%,rgba(250,245,236,.55) 44%,rgba(250,245,236,0) 62%)
+}
+.hero-copy{position:absolute;inset:0;display:flex;align-items:center;z-index:4}
+
+/* which clip is showing — five short rules, the active one filled brick */
+.reel-dots{
+  position:absolute;left:var(--gut);bottom:22px;z-index:5;
+  display:flex;gap:7px;align-items:center
+}
+.reel-dots i{
+  display:block;width:26px;height:5px;border-radius:0;
+  background:rgba(43,35,32,.22);border:1px solid rgba(43,35,32,.35);
+  transition:background .5s ease,width .5s ease
+}
+.reel-dots i.on{background:var(--brick);border-color:var(--ink);width:40px}
+/* the two words the line turns on, in the one accent this page allows */
+.hero h1 em{font-style:normal;color:var(--brick)}
+.hero p{margin:16px 0 26px;font-size:clamp(19px,2vw,24px);max-width:34ch;font-weight:500;color:#4A3D36}
+
+/* ---------- how it works, pulled up into the first screen ---------- */
+.steps{position:relative;z-index:5;margin-top:-72px;padding-bottom:clamp(46px,6vw,74px)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--card);border:var(--bw) solid var(--ink);border-radius:0;padding:26px;box-shadow:0 5px 0 var(--ink);border-top:10px solid var(--brick)}
+.step .n{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:0;background:var(--brick);color:var(--brick-ink);border:var(--bw) solid var(--ink);font-family:"BarlowCond",sans-serif;font-weight:600;font-size:19px;margin-bottom:15px}
+.step h3{font-size:22px;margin-bottom:7px}
+.step p{margin:0;color:var(--ink-soft);font-size:18px}
+
+/* ---------- fleet ---------- */
+.fleet{padding-block:clamp(46px,6vw,84px);background:var(--sand);border-block:var(--bw) solid var(--ink)}
+.fleet h2{font-size:clamp(2rem,4vw,3rem)}
+.fleet .sub{font-size:20px;margin:14px 0 32px;max-width:58ch;color:var(--ink-soft)}
+/* Three columns, and the flagship spans two — so five machines fill six cells
+   exactly. No orphan row, nothing reading as a missing card. */
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.u{background:var(--card);border:var(--bw) solid var(--ink);border-radius:0;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 0 var(--ink);transition:transform .18s,box-shadow .18s}
+.u:hover{transform:translateY(-3px);box-shadow:0 8px 0 var(--ink)}
+.u img{width:100%;height:184px;object-fit:cover;border-bottom:var(--bw) solid var(--ink)}
+.u .b{padding:22px;display:flex;flex-direction:column;flex:1}
+.u h3{font-size:22px;margin-bottom:6px}
+.u .spec{color:var(--ink-soft);font-size:17.5px;margin-bottom:auto}
+
+/* the flagship */
+.u.feature{grid-column:span 2;flex-direction:row}
+/* The feature slot is a TALL box and these are long trucks seen side-on,
+     so `cover` crops to whichever vertical slice sits at object-position.
+     Left at the default 50% it landed on the cab door and the tank — the
+     thing that makes it a water truck — fell outside the frame entirely.
+     30% pulls the window back along the body so the tank, the logo and the
+     stack all read. Only the feature card needs this; the small cards are
+     landscape and show the whole machine. */
+  .u.feature img{width:46%;height:auto;min-height:100%;border-bottom:0;border-right:var(--bw) solid var(--ink);flex:none;
+    object-fit:cover;object-position:14% 58%}
+.u.feature .b{padding:clamp(24px,2.4vw,34px)}
+.u.feature h3{font-size:clamp(24px,2.3vw,30px)}
+.u.feature .spec{font-size:19px}
+.u.feature .p b{font-size:38px}
+.u.feature .tag{margin-top:0}
+.u.feature .wrapcol{display:flex;flex-direction:column;flex:1;min-width:0}
+
+/* what kind of machine it is — makes the range read as coverage, not a short list */
+.kind{
+  display:inline-block;align-self:flex-start;
+  font-family:"Archivo",sans-serif;font-weight:600;font-size:10.5px;text-transform:uppercase;
+  background:var(--ink);border:2px solid var(--ink);border-radius:0;
+  padding:5px 11px;margin-bottom:11px;color:var(--card)
+}
+
+/* the five equipment shots are real photographs as of 2 Aug 2026;
+   the hero reel and crew.jpg are still generated */
+.note{margin:18px 0 0;font-size:16px;color:var(--ink-soft)}
+
+/* answers "is this everything?" directly, instead of letting the grid imply it */
+.more{
+  margin-top:18px;background:var(--brick);color:var(--brick-ink);
+  border:var(--bw) solid var(--ink);border-radius:0;box-shadow:0 5px 0 var(--ink);
+  padding:clamp(24px,2.6vw,34px);
+  display:flex;align-items:center;gap:clamp(20px,3vw,40px);flex-wrap:wrap
+}
+.more h3{font-family:"BarlowCond",sans-serif;font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;line-height:1.1}
+.more p{margin:8px 0 0;font-size:18px;color:#F6DDD7;max-width:52ch}
+.more .btn{margin-left:auto;background:var(--card);color:var(--ink);flex:none}
+.more .btn:hover{background:#fff}
+.u .p{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:20px;padding-top:15px;border-top:var(--bw) solid var(--ink)}
+.u .p b{font-family:"BarlowCond",sans-serif;font-weight:600;font-size:33px;letter-spacing:-.035em}
+.u .p span{font-size:16px;font-weight:600;color:var(--ink-soft)}
+.u .tag{background:var(--brick);color:var(--brick-ink);border-top:var(--bw) solid var(--ink);font-family:"BarlowCond",sans-serif;font-weight:600;font-size:14.5px;padding:11px 22px;text-align:center}
+
+/* ---------- human ---------- */
+.human{padding-block:clamp(46px,6vw,84px)}
+.human-in{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,64px);align-items:center}
+.human .pic{border:var(--bw) solid var(--ink);border-radius:0;overflow:hidden;box-shadow:0 6px 0 var(--ink)}
+.human img{width:100%;height:380px;object-fit:cover}
+.human h2{font-size:clamp(1.9rem,3.8vw,2.8rem)}
+.human .q{font-family:"BarlowCond",sans-serif;font-weight:600;font-size:clamp(21px,2.4vw,27px);
+  margin:18px 0 14px;line-height:1.16;color:var(--ink);
+  border-left:6px solid var(--brick);padding-left:16px}
+.human p{color:var(--ink-soft);margin:0;font-size:19px;max-width:44ch}
+
+/* ---------- enquiry form ----------
+   The only thing on this site that captures anything. Everything
+   else is a phone call. */
+.enquire{background:var(--sand);border-top:var(--bw) solid var(--ink);padding-block:clamp(46px,6vw,84px)}
+.enquire-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,60px);align-items:start}
+.enquire h2{font-size:clamp(1.9rem,3.8vw,2.8rem)}
+.enquire .sub{margin:14px 0 0;font-size:19px;color:var(--ink-soft);max-width:40ch}
+.form-card{background:var(--card);border:var(--bw) solid var(--ink);border-radius:0;box-shadow:0 6px 0 var(--ink);padding:clamp(22px,3vw,32px)}
+.f{margin-bottom:15px}
+.f label{display:block;font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;font-size:11px;margin-bottom:7px}
+.f input,.f select,.f textarea{
+  width:100%;background:var(--cream);color:var(--ink);
+  border:var(--bw) solid var(--ink);border-radius:0;
+  padding:13px 14px;font-family:"Archivo",system-ui,sans-serif;font-size:18px;
+  transition:border-color .18s,box-shadow .18s,background .18s
+}
+.f textarea{min-height:88px;resize:vertical;line-height:1.4}
+.f select{appearance:none;-webkit-appearance:none;padding-right:40px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232B2320' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;background:#fff;border-color:var(--brick);box-shadow:0 0 0 3px rgba(168,59,50,.18)}
+.f input::placeholder,.f textarea::placeholder{color:#9A8A80}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f .err{display:none;margin-top:6px;font-family:"BarlowCond",sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#8C1D18}
+.f[data-invalid="true"] .err{display:block}
+.f[data-invalid="true"] input,.f[data-invalid="true"] select{border-color:#8C1D18;background:#F7E4E2}
+.form-note{margin:14px 0 0;font-size:16px;color:var(--ink-soft)}
+.sent{display:none;background:var(--brick);color:var(--brick-ink);border:var(--bw) solid var(--ink);border-radius:0;box-shadow:0 6px 0 var(--ink);padding:clamp(24px,3vw,34px)}
+.sent h3{font-family:"BarlowCond",sans-serif;font-size:clamp(22px,2.4vw,28px);margin-bottom:8px}
+.sent p{margin:0;font-size:18px;color:#F6DDD7}
+form[data-sent="true"]{display:none}
+form[data-sent="true"] + .sent{display:block}
+
+/* ---------- call ---------- */
+.call{background:var(--brick);color:var(--brick-ink);border-top:var(--bw) solid var(--ink);padding-block:clamp(46px,6vw,80px);text-align:center}
+.call h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+.call .no{display:inline-block;margin:16px 0 6px;font-family:"BarlowCond",sans-serif;font-weight:600;font-size:clamp(2.3rem,6.4vw,4.2rem);letter-spacing:-.04em;text-decoration:none;color:var(--brick-ink)}
+.call .no:hover{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:4px}
+.call p{margin:4px 0 28px;font-size:20px;font-weight:600;color:#F3D9D2}
+.call .acts{justify-content:center}
+
+/* ---------- footer ---------- */
+.foot{border-top:var(--bw) solid var(--ink);padding-block:30px 38px;font-size:17px;color:var(--ink-soft)}
+.foot-in{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center}
+.foot .mark{font-size:20px;color:var(--ink)}
+.foot a{color:var(--ink)}
+
+/* ============================================================
+   BARLOW CONDENSED — the type of a spec plate.
+   Condensed capitals are what gets stencilled on the side of a machine, and
+   they buy width back: the same headline fits in fewer lines than Anton did,
+   so display sizes go UP rather than down. Condensed faces jam without a
+   little tracking, so caps get some air. Every price and phone number is
+   tabular — figures in a rental yard are meant to be read as numbers, not
+   as words.
+   ============================================================ */
+h1,h2,h3,
+.mark,.tab,.nav .tel,.tabs .tel-m,.btn,
+.step .n,.u .p b,.u .tag,.more h3,.call .no{
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+h1,h2,h3{line-height:1.0}
+.num,.u .p b,.call .no,.u .spec{font-variant-numeric:tabular-nums}
+/* two lines, one per half of the line. Condensed fits more per line, so this
+   takes both a bigger size and a wider measure than the Anton cut did. */
+.hero h1{font-size:clamp(2rem,5.2vw,4.2rem);max-width:19ch;letter-spacing:.014em}
+.fleet h2,.human h2,.enquire h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+.btn,.tab,.nav .tel{font-size:19px;letter-spacing:.05em}
+.f label,.kind{letter-spacing:.15em}
+.mark{letter-spacing:.02em}
+.call h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+.call .no{font-size:clamp(2.1rem,5.8vw,3.8rem);letter-spacing:.01em}
+.u .p b{font-size:30px}
+.u.feature .p b{font-size:35px}
+.kind{letter-spacing:.1em}          /* small label keeps its wider fit */
+
+/* A spoken line does not belong in a poster face — the quote stays
+   sentence case in the body voice so it reads as a person talking. */
+.human .q{
+  font-family:"Archivo",system-ui,sans-serif;font-weight:600;
+  text-transform:none;letter-spacing:0;
+  font-size:clamp(21px,2.4vw,27px);line-height:1.3
+}
+
+@media (max-width:1080px){
+  .g3{grid-template-columns:1fr}
+  .human-in{grid-template-columns:1fr}
+  .enquire-in{grid-template-columns:1fr}
+  .steps{margin-top:-40px}
+  /* two up: feature spans both, then 4 cards fill two clean rows */
+  .units{grid-template-columns:repeat(2,1fr)}
+  .u.feature{grid-column:span 2}
+  .more{flex-direction:column;align-items:flex-start}
+  .more .btn{margin-left:0}
+}
+
+/* The nav collapses earlier than the content grid: four tabs plus a large
+   wordmark and the phone button run out of room before the page does. */
+@media (max-width:1180px){
+  /* tabs drop into a full-width panel below the bar */
+  .burger{display:flex}
+  .nav .tel{display:none}
+  .tabs{
+    position:absolute;left:0;right:0;top:100%;
+    flex-direction:column;gap:12px;margin:0;
+    background:var(--cream);border-bottom:var(--bw) solid var(--ink);
+    padding:18px var(--gut) 24px;
+    transform:translateY(-14px);opacity:0;pointer-events:none;
+    transition:transform .3s cubic-bezier(.2,.85,.25,1),opacity .25s
+  }
+  .nav[data-open="true"] .tabs{transform:none;opacity:1;pointer-events:auto}
+  .tab{justify-content:center;font-size:20px;padding:18px}
+  .tabs .tel-m{
+    display:inline-flex;align-items:center;justify-content:center;gap:11px;
+    background:var(--ink);color:var(--cream);text-decoration:none;
+    font-family:"BarlowCond",sans-serif;font-weight:600;font-size:20px;padding:18px;
+    border:var(--bw) solid var(--ink);border-radius:0;box-shadow:0 4px 0 var(--brick)
+  }
+  .tabs .tel-m svg{width:21px;height:21px;fill:none;stroke:#E9A79E;stroke-width:2.2}
+  .nav-in{position:relative}
+}
+.tabs .tel-m{display:none}
+
+@media (max-width:700px){
+  /* single column — the feature stops being wide and stacks like the rest */
+  .units{grid-template-columns:1fr}
+  .u.feature{grid-column:auto;flex-direction:column}
+  .u.feature img{width:100%;height:200px;min-height:0;border-right:0;border-bottom:var(--bw) solid var(--ink)}
+  .hero::after{background:linear-gradient(96deg,var(--cream) 0%,rgba(250,245,236,.94) 48%,rgba(250,245,236,.35) 78%,rgba(250,245,236,.1))}
+  .hero img{height:400px}
+  .steps{margin-top:24px}
+  .acts .btn{width:100%}
+  .nav .tel span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<a class="btn skip" href="#fleet">Skip to the equipment</a>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <a class="mark" href="#top">Double<i>L</i></a>
+
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="tabs">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="tabs" id="tabs" aria-label="Primary">
+    <a class="tab" href="#fleet">Equipment</a>
+    <a class="tab" href="#how">How it works</a>
+    <a class="tab" href="#call">Contact</a>
+    <a class="tel-m" href="tel:+16822621318">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+      <span class="num">(682) 262-1318</span>
+    </a>
+  </nav>
+
+  <a class="tel" href="tel:+16822621318">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+    <span class="num">(682) 262-1318</span>
+  </a>
+</div></header>
+
+<main id="top">
+
+<section class="hero" id="hero">
+  <!-- still first: it carries the hero with no JS, no video support, or reduced motion -->
+  <img class="layer" id="heroStill" src="assets/heroes/h01.jpg" alt="Water truck spraying a haul road on a sunny day">
+  <div class="reel-dots" id="reelDots" aria-hidden="true"></div>
+  <div class="hero-copy"><div class="wrap">
+    <h1>Driven by <em>integrity</em>,<br>fueled by <em>innovation</em></h1>
+    <p>Wholesale water trucks, skid steers and light towers for rental yards — rented to you at
+    trade, so you rent them out as your own.</p>
+    <div class="acts">
+      <a class="btn" href="#fleet">See our equipment</a>
+      <a class="btn cream" href="#enquire">Get your rate</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="steps" id="how"><div class="wrap"><div class="g3">
+  <div class="step"><span class="n">1</span><h3>You take the order</h3><p>A customer needs a water truck you don't have on the lot. You say yes.</p></div>
+  <div class="step"><span class="n">2</span><h3>You call us</h3><p>Give us the unit and the dates. We'll tell you what's open and what it costs you.</p></div>
+  <div class="step"><span class="n">3</span><h3>You bill your customer</h3><p>The ticket is yours. The customer is yours. The difference is yours to keep.</p></div>
+</div></div></section>
+
+<section class="fleet" id="fleet"><div class="wrap">
+  <span class="bar"></span>
+  <h2>What we've got</h2>
+  <p class="sub">Water trucks, skid steers and light towers &mdash; the calls a yard can't always
+  cover on its own. The rates below are retail; yours are lower. Call for your rate.</p>
+
+  <div class="units">
+
+    <div class="u feature">
+      <img src="assets/day/water-6x6.jpg" alt="6x6 water truck">
+      <div class="wrapcol">
+        <div class="b">
+          <span class="kind">Water truck</span>
+          <h3>6&times;6 Water Truck</h3>
+          <p class="spec">4,000 gallon &middot; six-wheel drive &middot; 10-speed manual. The one
+          rental yards call us for &mdash; dust control on haul roads, pads and lay-downs.</p>
+          <div class="p"><b class="num">$1,600</b><span>per day</span></div>
+        </div>
+        <div class="tag">Rental companies pay less</div>
+      </div>
+    </div>
+
+    <div class="u"><img src="assets/day/water-auto.jpg" alt="Automatic water truck">
+      <div class="b"><span class="kind">Water truck</span><h3>Water Truck &mdash; Automatic</h3><p class="spec">4,000 gallon &middot; automatic transmission</p>
+      <div class="p"><b class="num">$850</b><span>per day</span></div></div>
+      <div class="tag">Rental companies pay less</div></div>
+
+    <div class="u"><img src="assets/day/svl97.jpg" alt="Kubota SVL97-3 skid steer">
+      <div class="b"><span class="kind">Skid steer</span><h3>Kubota SVL97-3</h3><p class="spec">11,989 lb &middot; hydraulic quick coupler</p>
+      <div class="p"><b class="num">$613</b><span>per day</span></div></div>
+      <div class="tag">Rental companies pay less</div></div>
+
+    <div class="u"><img src="assets/day/svl75.jpg" alt="Kubota SVL75-3 skid steer">
+      <div class="b"><span class="kind">Skid steer</span><h3>Kubota SVL75-3</h3><p class="spec">9,315 lb &middot; 75 horsepower</p>
+      <div class="p"><b class="num">$575</b><span>per day</span></div></div>
+      <div class="tag">Rental companies pay less</div></div>
+
+    <div class="u"><img src="assets/day/lighttower.jpg" alt="Towable light tower">
+      <div class="b"><span class="kind">Lighting</span><h3>Light Tower</h3><p class="spec">Adjustable LED &middot; diesel &middot; towable</p>
+      <div class="p"><b class="num">$152</b><span>per day</span></div></div>
+      <div class="tag">Rental companies pay less</div></div>
+
+  </div>
+
+  <p class="note">Photographs of the actual machines, taken at the yard.</p>
+
+  <div class="more">
+    <div>
+      <h3>Don't see what you need?</h3>
+      <p>We build water-truck chassis conversions in-house. Tell us the spec you're being
+      asked for and we'll quote the build or tell you straight if we can't help.</p>
+    </div>
+    <a class="btn" href="#enquire">Tell us what you need</a>
+  </div>
+</div></section>
+
+<section class="human"><div class="wrap human-in">
+  <div class="pic"><img src="assets/day/crew.jpg" alt="Double L yard hand beside a water truck"></div>
+  <div>
+    <span class="bar"></span>
+    <h2>Family-run,<br>Texas built.</h2>
+    <p class="q">"Nobody likes telling a good customer no."</p>
+    <p>That's the whole reason we do this. We keep the iron so you don't have to buy it,
+    and we stay out of the way while you take care of your people. </p>
+  </div>
+</div></section>
+
+<section class="enquire" id="enquire"><div class="wrap enquire-in">
+  <div>
+    <span class="bar"></span>
+    <h2>Tell us what<br>you need.</h2>
+    <p class="sub">Give us the machine and the dates, and we'll come back with what's open and what
+    it costs you. If it's urgent, the phone is faster.</p>
+  </div>
+
+  <div>
+    <form class="form-card" id="leadForm" novalidate>
+      <div class="f2">
+        <div class="f" id="f-name">
+          <label for="l-name">Your name</label>
+          <input id="l-name" name="name" type="text" autocomplete="name" placeholder="First and last" required>
+          <span class="err">We'd like to know who we're calling</span>
+        </div>
+        <div class="f" id="f-co">
+          <label for="l-co">Your company</label>
+          <input id="l-co" name="company" type="text" autocomplete="organization" placeholder="Rental company" required>
+          <span class="err">We rent to companies only</span>
+        </div>
+      </div>
+
+      <div class="f2">
+        <div class="f" id="f-phone">
+          <label for="l-phone">Phone</label>
+          <input id="l-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(000) 000-0000" required>
+          <span class="err">We need a number to call back on</span>
+        </div>
+        <div class="f" id="f-email">
+          <label for="l-email">Email <span style="font-family:Barlow,sans-serif;text-transform:none;letter-spacing:0;color:var(--ink-soft)">(optional)</span></label>
+          <input id="l-email" name="email" type="email" autocomplete="email" placeholder="you@company.com">
+        </div>
+      </div>
+
+      <div class="f">
+        <label for="l-machine">What do you need</label>
+        <select id="l-machine" name="machine">
+          <option>6&times;6 Water Truck</option>
+          <option>Water Truck &mdash; Automatic</option>
+          <option>Kubota SVL97-3</option>
+          <option>Kubota SVL75-3</option>
+          <option>Light Tower</option>
+          <option>Something else &mdash; tell us below</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label for="l-msg">Anything else</label>
+        <textarea id="l-msg" name="message" placeholder="Dates, job site, what you're being asked for"></textarea>
+      </div>
+
+      <button class="btn" type="submit" id="leadBtn" style="width:100%">Send it over</button>
+      <p class="form-note">Or skip it and call <a href="tel:+16822621318" style="color:var(--brick);font-weight:600">(682) 262-1318</a>.</p>
+    </form>
+
+    <div class="sent" role="status">
+      <h3>Got it.</h3>
+      <p>We'll call you back on the number you gave us. If you need it sooner than that,
+      ring the yard on (682) 262-1318 &mdash; somebody picks up.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="call" id="call"><div class="wrap">
+  <h2>Give us a call.</h2>
+  <a class="no num" href="tel:+16822621318">(682) 262-1318</a>
+  <p>Bay City, Texas &middot; Open 24 hours</p>
+  <div class="acts">
+    <a class="btn dark" href="tel:+16822621318">Book a unit</a>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="foot"><div class="wrap foot-in">
+  <a class="mark" href="#top">Double<i>L</i></a>
+  <span>Equipment Rental Co &middot; Bay City, TX 77414</span>
+  <span style="margin-left:auto"><a href="mailto:info@doublelequipmentrentco.com">info@doublelequipmentrentco.com</a></span>
+</div></footer>
+
+<!-- one API address for the website and both apps -->
+<script src="app/config.js"></script>
+<script>
+/* ============================================================
+   HERO REEL — five 3s clips, crossfaded, repeating forever.
+   Two rules keep it smooth:
+   1. the next clip is buffered while the current one plays
+   2. we only cut across when it is genuinely ready; until then the
+      current clip loops, so the hero never freezes or goes black
+   ============================================================ */
+(function(){
+  var CLIPS=["h01","h03","h05","h08","h09"];
+  var FADE=0.6;                       // crossfade seconds
+  var hero=document.getElementById("hero");
+  var still=document.getElementById("heroStill");
+  var dotsEl=document.getElementById("reelDots");
+  if(!hero||!still) return;
+
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var probe=document.createElement("video");
+  if(!probe.canPlayType||!probe.canPlayType("video/mp4")) return;
+
+  hero.style.setProperty("--fade",FADE+"s");
+
+  var vids=CLIPS.map(function(id){
+    var v=document.createElement("video");
+    v.className="layer"; v.muted=true; v.loop=true;
+    v.playsInline=true; v.setAttribute("playsinline","");
+    v.preload="none"; v.src="assets/heroes/"+id+".mp4";
+    hero.insertBefore(v,dotsEl);
+    return v;
+  });
+
+  var dots=CLIPS.map(function(){
+    var d=document.createElement("i"); dotsEl.appendChild(d); return d;
+  });
+
+  function prime(i){
+    var v=vids[i];
+    if(v.preload!=="auto"){ v.preload="auto"; v.load(); }
+  }
+
+  var i=0,moving=false,raf=null;
+
+  function paint(){
+    dots.forEach(function(d,j){ d.classList.toggle("on",j===i); });
+  }
+
+  function advance(){
+    var n=(i+1)%vids.length, nxt=vids[n];
+    if(nxt.readyState<3){ prime(n); return; }   // not ready — current keeps looping
+    moving=true;
+    nxt.currentTime=0;
+    var p=nxt.play(); if(p&&p.catch) p.catch(function(){});
+    nxt.style.opacity=1;
+    var old=vids[i];
+    old.style.opacity=0;
+    setTimeout(function(){ old.pause(); old.currentTime=0; }, FADE*1000+80);
+    i=n; paint(); prime((i+1)%vids.length);
+    setTimeout(function(){ moving=false; }, FADE*1000+120);
+  }
+
+  function tick(){
+    var v=vids[i];
+    if(!moving && v.readyState>=2 && v.duration && isFinite(v.duration)){
+      if(v.currentTime >= v.duration-FADE-0.05) advance();
+    }
+    raf=requestAnimationFrame(tick);
+  }
+
+  function start(){
+    var first=vids[0];
+    first.style.opacity=1;
+    var p=first.play();
+    if(p&&p.catch) p.catch(function(){ first.style.opacity=0; });  // autoplay refused — still holds
+    paint(); prime(1);
+    raf=requestAnimationFrame(tick);
+  }
+
+  prime(0);
+  if(vids[0].readyState>=3) start();
+  else vids[0].addEventListener("canplay",start,{once:true});
+
+  // stop the reel while the tab is hidden; nothing to render, no reason to decode
+  document.addEventListener("visibilitychange",function(){
+    if(document.hidden){ if(raf) cancelAnimationFrame(raf); raf=null; vids[i].pause(); }
+    else if(!raf){ var p=vids[i].play(); if(p&&p.catch) p.catch(function(){}); raf=requestAnimationFrame(tick); }
+  });
+})();
+
+/* ============================================================
+   THE ENQUIRY FORM
+
+   Posts to the same Apps Script the two apps use, so a website
+   lead lands in the same Leads tab Tyson works from in Ops.
+   API_URL lives in app/config.js — one address for all three.
+
+   With no endpoint configured it does NOT pretend to have sent
+   anything: it opens a prefilled email instead and says so.
+   ============================================================ */
+(function(){
+  var form=document.getElementById("leadForm");
+  if(!form) return;
+  var API=(window.DL_CONFIG&&window.DL_CONFIG.API_URL)||"";
+  var btn=document.getElementById("leadBtn");
+
+  function digits(s){ return String(s||"").replace(/\D/g,""); }
+  function mark(id,bad){
+    var f=document.getElementById(id);
+    if(bad) f.setAttribute("data-invalid","true"); else f.removeAttribute("data-invalid");
+    return !bad;
+  }
+
+  form.addEventListener("input",function(e){
+    var f=e.target.closest(".f");
+    if(f) f.removeAttribute("data-invalid");
+  });
+
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+
+    var name=document.getElementById("l-name").value.trim();
+    var company=document.getElementById("l-co").value.trim();
+    var phone=document.getElementById("l-phone").value.trim();
+    var email=document.getElementById("l-email").value.trim();
+    var machine=document.getElementById("l-machine").value;
+    var message=document.getElementById("l-msg").value.trim();
+
+    var ok=true;
+    if(!mark("f-name",!name)) ok=false;
+    if(!mark("f-co",!company)) ok=false;
+    if(!mark("f-phone",digits(phone).length<10)) ok=false;
+    if(!ok){ form.querySelector('[data-invalid="true"] input').focus(); return; }
+
+    var payload={action:"lead",name:name,company:company,phone:phone,
+                 email:email,machine:machine,message:message,source:"Website form"};
+
+    /* No endpoint yet — hand it to their mail app rather than
+       swallowing the enquiry and showing a success panel. */
+    if(!API){
+      var body=["Name: "+name,"Company: "+company,"Phone: "+phone,
+                email?"Email: "+email:"","Machine: "+machine,"",message].join("\n");
+      window.location.href="mailto:info@doublelequipmentrentco.com"+
+        "?subject="+encodeURIComponent("Enquiry — "+company)+
+        "&body="+encodeURIComponent(body);
+      return;
+    }
+
+    btn.disabled=true; btn.textContent="Sending…";
+    fetch(API,{method:"POST",redirect:"follow",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify(payload)})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(!d||d.ok!==true) throw new Error((d&&d.error)||"Couldn't send it.");
+        form.setAttribute("data-sent","true");
+        form.nextElementSibling.scrollIntoView({block:"nearest",behavior:"smooth"});
+      })
+      .catch(function(){
+        btn.disabled=false; btn.textContent="Send it over";
+        alert("That didn't go through. Give us a call on (682) 262-1318 and we'll sort it out.");
+      });
+  });
+})();
+
+(function(){
+  var nav=document.getElementById("nav"),burger=document.getElementById("burger");
+  burger.addEventListener("click",function(){
+    var open=nav.getAttribute("data-open")==="true";
+    nav.setAttribute("data-open",open?"false":"true");
+    burger.setAttribute("aria-expanded",open?"false":"true");
+    burger.setAttribute("aria-label",open?"Open menu":"Close menu");
+  });
+  // close after picking a tab
+  document.querySelectorAll(".tabs a").forEach(function(a){
+    a.addEventListener("click",function(){
+      nav.setAttribute("data-open","false");
+      burger.setAttribute("aria-expanded","false");
+    });
+  });
+  // mark the tab you're looking at — every tab is a destination now
+  var tabs=[].slice.call(document.querySelectorAll(".tab")),
+      targets=tabs.map(function(t){return document.querySelector(t.getAttribute("href"))});
+  if("IntersectionObserver" in window){
+    /* Track what is CURRENTLY inside the band rather than reacting only to
+       things entering it. Acting on isIntersecting alone means that once you
+       scroll past the last section nothing ever fires again, so the last tab
+       stays lit over the footer — which is the bug this replaces. */
+    var inBand=[];
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var at=inBand.indexOf(e.target);
+        if(e.isIntersecting){ if(at===-1) inBand.push(e.target); }
+        else if(at!==-1){ inBand.splice(at,1); }
+      });
+      // whichever section is furthest down the page wins a tie
+      var cur=-1;
+      inBand.forEach(function(el){
+        var i=targets.indexOf(el);
+        if(i>cur) cur=i;
+      });
+      tabs.forEach(function(t,j){
+        if(j===cur) t.setAttribute("aria-current","page"); else t.removeAttribute("aria-current");
+      });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    targets.forEach(function(t){ if(t) io.observe(t); });
+  }
+})();
+</script>
+</body>
+</html>

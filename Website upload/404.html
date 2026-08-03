@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not here — Double L Equipment Rental Co</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta name="theme-color" content="#FAF5EC">
+<meta name="robots" content="noindex">
+
+<style>
+@font-face{font-family:"BarlowCond";src:url("assets/fonts/barlow-condensed-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-700.woff2") format("woff2");font-weight:700;font-display:swap}
+
+/* ============================================================
+   404
+
+   Somebody mistyped an address, or followed a link that has
+   moved. Two things matter and nothing else does: say plainly
+   that the page isn't here, and put the phone number in front
+   of them. A rental yard hunting for a water truck at 7am does
+   not want a joke about lost equipment — they want the number.
+   ============================================================ */
+
+:root{
+  --cream:#FAF5EC; --sand:#F0E6D6; --card:#FFFCF6;
+  --brick:#A83B32; --brick-deep:#8A2F27; --brick-ink:#FFF8F0;
+  --ink:#2B2320; --ink-soft:#6A5B52; --bw:2px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--cream);color:var(--ink);min-height:100vh;
+  font-family:"Archivo",system-ui,sans-serif;font-size:18px;line-height:1.55;
+  display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+
+.top{border-bottom:var(--bw) solid var(--ink)}
+.top .in{max-width:1000px;margin:0 auto;padding:18px 24px;display:flex;align-items:center}
+.mark{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-family:"BarlowCond",sans-serif;font-size:clamp(24px,3vw,32px);font-weight:600;letter-spacing:.02em;line-height:1;
+}
+.mark svg{width:34px;height:34px;flex:none}
+
+main{flex:1;display:flex;align-items:center}
+.wrap{max-width:1000px;margin:0 auto;padding:clamp(40px,8vw,90px) 24px;width:100%}
+
+h1{
+  font-family:"BarlowCond",sans-serif;font-weight:600;text-transform:uppercase;
+  font-size:clamp(2.4rem,8vw,4.6rem);line-height:1.02;letter-spacing:.01em;margin-bottom:20px;
+}
+h1 em{font-style:normal;color:var(--brick)}
+.lead{font-size:clamp(19px,2.2vw,23px);color:var(--ink-soft);max-width:52ch;margin-bottom:34px}
+
+.doors{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:40px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  font-family:"BarlowCond",sans-serif;font-size:17px;text-transform:uppercase;letter-spacing:.03em;
+  background:var(--brick);color:var(--brick-ink);
+  border:var(--bw) solid var(--ink);border-radius:0;padding:15px 22px;
+  box-shadow:0 5px 0 var(--ink);transition:background .18s,transform .14s,box-shadow .14s;
+}
+.btn:hover{background:var(--brick-deep)}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
+.btn.cream{background:var(--card);color:var(--ink)}
+.btn.cream:hover{background:var(--sand)}
+.btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+.call{
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px;
+  background:var(--sand);border:var(--bw) solid var(--ink);border-radius:0;
+  box-shadow:0 5px 0 var(--ink);padding:20px 22px;max-width:640px;
+}
+.call .t{flex:1;min-width:200px}
+.call .t b{display:block;font-family:"BarlowCond",sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:.03em}
+.call .t small{display:block;font-size:15.5px;color:var(--ink-soft);margin-top:3px}
+.call .num{
+  font-family:"BarlowCond",sans-serif;font-size:23px;letter-spacing:.01em;text-decoration:none;
+  color:var(--brick);white-space:nowrap;
+}
+
+.foot{border-top:var(--bw) solid var(--ink);background:var(--sand)}
+.foot .in{max-width:1000px;margin:0 auto;padding:18px 24px;font-size:14.5px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="in">
+  <a class="mark" href="/">
+    <svg viewBox="0 0 128 128"><rect width="128" height="128" fill="#A83B32"/><path d="M34 22 h22 v62 h40 v22 H34 Z" fill="#FAF5EC"/></svg>
+    DOUBLE L
+  </a>
+</div></header>
+
+<main><div class="wrap">
+  <h1>That page isn't <em>here</em>.</h1>
+  <p class="lead">Either the address has a typo in it or the page has moved. Nothing's broken at
+  our end — but if you're chasing a machine, don't waste time hunting. Call the yard.</p>
+
+  <div class="doors">
+    <a class="btn" href="/">
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      Back to the site
+    </a>
+    <a class="btn cream" href="/#equipment">
+      <svg viewBox="0 0 24 24"><path d="M3 8h13v8H3Z"/><path d="M16 11h3l2 3v2h-5Z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+      What we've got
+    </a>
+  </div>
+
+  <div class="call">
+    <span class="t">
+      <b>Need iron today?</b>
+      <small>Somebody picks up. Bay City, Texas.</small>
+    </span>
+    <a class="num" href="tel:+16822621318">(682) 262-1318</a>
+  </div>
+</div></main>
+
+<footer class="foot"><div class="in">
+  Double L Equipment Rental Co · Bay City, TX 77414
+</div></footer>
+
+</body>
+</html>

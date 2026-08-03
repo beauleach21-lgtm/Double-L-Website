@@ -1,0 +1,41 @@
+DOUBLE L — THE WEBSITE
+======================
+
+Everything in this folder IS the website. Nothing else is needed.
+Upload the CONTENTS of this folder (not the folder itself) to the web
+root of the hosting account, so that index.html sits at the top level.
+
+Then https://yourdomain.com/ serves index.html, and a wrong address
+serves 404.html.
+
+WHAT'S HERE
+  index.html          the whole website — all the design and behaviour
+  404.html            the wrong-address page
+  favicon-*.png       the tab icon, three sizes
+  og.png              the picture that appears when the link is shared
+  assets/day/         the five machines and the crew shot
+  assets/fonts/       the six type files the site uses
+  assets/heroes/      the hero reel: one still and five clips
+  app/config.js       one setting — the address the enquiry form posts to
+
+DO NOT RENAME OR REARRANGE ANYTHING. The paths inside index.html point
+at these exact names.
+
+THE THREE FAVICON LINKS AND og:image ARE ABSOLUTE (/favicon-32.png).
+They resolve correctly at a domain root. If the site is ever put in a
+SUBFOLDER instead, those four paths need the subfolder adding.
+
+BEFORE IT GOES LIVE
+  · Do not touch the MX records on the old domain. Email runs on
+    doublelequipmentrentco.com and a dead inbox is worse than a late
+    website.
+  · The enquiry form posts to the Google Sheet. Send one test enquiry
+    from the live site and confirm the row arrives.
+  · The hero clips are about 18 MB in total. They load only when the
+    reel reaches them, but on a slow phone connection the reel will be
+    late. Compressing them is the single biggest speed win available.
+
+TO REBUILD THIS FOLDER after changing the site:
+  python3 "Double L Site/make-website-folder.py"
+It is rebuilt from scratch each time, so anything added here by hand
+is lost. Make changes in "Double L Site", never here.
