@@ -13,7 +13,7 @@ WHAT'S HERE
   404.html            the wrong-address page
   favicon-*.png       the tab icon, three sizes
   og.png              the picture that appears when the link is shared
-  assets/day/         the five machines and the crew shot
+  assets/day/         the five machines and the fleet line-up
   assets/fonts/       the six type files the site uses
   assets/heroes/      the hero reel: one still and five clips
   app/config.js       one setting — the address the enquiry form posts to

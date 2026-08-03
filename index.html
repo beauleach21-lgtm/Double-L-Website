@@ -43,8 +43,10 @@
   STILL PLACEHOLDER
   -----------------
   · The five equipment photographs are REAL — the actual units, shot at the yard,
-    installed 2 Aug 2026. The hero reel and the crew shot are still generated and
-    are the last synthetic imagery on the page.
+    installed 2 Aug 2026. The "Family-run" photograph is real too since 3 Aug — it is
+    Double L's own line-up, and it replaced a GENERATED man who was standing under a
+    heading that says "family-run". THE HERO REEL IS NOW THE ONLY SYNTHETIC IMAGERY
+    LEFT ON THE PAGE.
   · "DOUBLE L" is set in Barlow Condensed — there is no drawn logo yet.
   · The tab icon is a plain brick square with an L, for the same reason.
   · Nothing on the page captures a lead — every action is a phone call or an email.
@@ -294,8 +296,8 @@ a{color:inherit}
   padding:5px 11px;margin-bottom:11px;color:var(--card)
 }
 
-/* the five equipment shots are real photographs as of 2 Aug 2026;
-   the hero reel and crew.jpg are still generated */
+/* the five equipment shots are real photographs as of 2 Aug 2026, and the
+   "Family-run" line-up since 3 Aug; only the hero reel is still generated */
 .note{margin:18px 0 0;font-size:16px;color:var(--ink-soft)}
 
 /* answers "is this everything?" directly, instead of letting the grid imply it */
@@ -318,7 +320,14 @@ a{color:inherit}
 .human{padding-block:clamp(46px,6vw,84px)}
 .human-in{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,64px);align-items:center}
 .human .pic{border:var(--bw) solid var(--ink);border-radius:0;overflow:hidden;box-shadow:0 6px 0 var(--ink)}
-.human img{width:100%;height:380px;object-fit:cover}
+/* The fleet-line photo is a 3.3:1 panorama — the whole line-up is the point of
+   it. The old 380px fixed height with object-fit:cover cropped away the outer
+   truck at each end, which is exactly the content worth showing, so this slot
+   now takes the image at its natural ratio. Swap in a normal-shaped photo and
+   put the 380px back. Beau's call 3 Aug: it replaced a GENERATED man standing
+   under a "family-run" heading — the original is at
+   .edits-backup/crew.jpg.generated-original. */
+.human img{width:100%;height:auto;display:block}
 .human h2{font-size:clamp(1.9rem,3.8vw,2.8rem)}
 .human .q{font-family:"BarlowCond",sans-serif;font-weight:600;font-size:clamp(21px,2.4vw,27px);
   margin:18px 0 14px;line-height:1.16;color:var(--ink);
@@ -583,7 +592,7 @@ h1,h2,h3{line-height:1.0}
 </div></section>
 
 <section class="human"><div class="wrap human-in">
-  <div class="pic"><img src="assets/day/crew.jpg" alt="Double L yard hand beside a water truck"></div>
+  <div class="pic"><img src="assets/day/fleet-line.jpg" alt="The Double L fleet lined up — two branded water trucks, two Kubota track loaders and a light tower"></div>
   <div>
     <span class="bar"></span>
     <h2>Family-run,<br>Texas built.</h2>
